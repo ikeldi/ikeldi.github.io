@@ -12,7 +12,7 @@
     <script src="https://kit.fontawesome.com/d355e6a3e6.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <title>ikeldi</title>
+    <title>ikeldi dev_</title>
     <link rel="icon" href="https://avatars2.githubusercontent.com/u/37901291?v=4" type="image/png">
 </head>
 <style>
@@ -43,27 +43,32 @@
         <div class="col-12 text-center"><br>
             <audio src="audio/Mr.Kitty - After Dark.mp3" id="play" autoplay loop></audio>
             <h1>ikeldi dev_</h1><br>
-            <a href="https://github.com/ikeldi" target="_blank"><img src="https://avatars2.githubusercontent.com/u/37901291?v=4" class="animated infinite pulse"  id="imgur" alt="Аватарка профиля GitHub" width="300px" height="300px" style="border-radius: 50%;"></a>
-            <br><br><br><br>
+            <img src="https://avatars2.githubusercontent.com/u/37901291?v=4" class="animated infinite pulse"  id="player" alt="Аватарка профиля GitHub" width="300px" height="300px" style="border-radius: 50%;">
+            
+	    <br><br><b><p>Mr.Kitty - After Dark</p></b><br><br>
             <div class="container">
                 <div class="row" style="font-size: 50px;">
+                   <div class="col" id="github">
+						<div class="haved">
+                            <i class="fab fa-github"></i>
+                            <b>  <p> GitHub </p></b>
+                        </div>
+                    </div>
                     <div class="col" id="projects">
                         <div class="haved">
                         <i class="fas fa-align-right"></i>
                         <b><p> Проекты </p></b>
                         </div>
                     </div>
-                    <div class="col" id="contacts">
+                    <div class="col" id="telegram">
                         <div class="haved">
                             <i class="fas fa-paper-plane"></i>
-                            <b>  <p> Контакты </p></b>
+                            <b>  <p> Telegram </p></b>
                         </div>
-
                     </div>
                 </div>
                 <br>
-                <b><p id="player">Mr.Kitty - After Dark</p></b>
-                <p> *Тыкай на название трека и будешь паузить или наоборот</p><br><br><b><br><br><p>make on pentium by human</p></b>
+                <p> *Тыкай на аватарку сверху и будешь паузить или наоборот</p><br><br><b><br><br><p>make on pentium by a human</p></b>
             </div>
         </div>
         <div class="col-sm">
@@ -76,16 +81,19 @@
     $( "#projects" ).click(function() {
         window.location.href = "/projects";
     });
-    $( "#contacts" ).click(function() {
-        window.location.href = "/contacts";
+    $( "#telegram" ).click(function() {
+        window.location.href = "tg://resolve?domain=ikeldi";
+    });
+  	$( "#github" ).click(function() {
+        window.location.href = "https://github.com/ikeldi";
     });
     $('#player').click(function() {
         if (document.getElementById('play').paused == false) {
             document.getElementById('play').pause();
-            $('#imgur').removeClass('infinite');
+            $('#player').removeClass('infinite');
         } else {
             document.getElementById('play').play();
-            $('#imgur').addClass('infinite');
+            $('#player').addClass('infinite');
         }
     });
     // $( "#name" ).hover(function() {
